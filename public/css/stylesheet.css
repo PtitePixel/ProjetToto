@@ -1,0 +1,27 @@
+a {
+  text-decoration: none;
+  text-align: center;
+  font-family: Arial;
+  color: red;
+  font-size: 15px;
+}
+
+th {
+  font-family: Arial;
+  text-align: left;
+  
+}
+
+td {
+  font-family: Arial;
+  font-size: 12px;
+
+
+}
+
+
+footer p {
+  text-align: center;
+  font-size: 12px;
+  font-family: Arial;
+}
