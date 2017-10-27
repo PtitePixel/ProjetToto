@@ -3,31 +3,32 @@ foreach ($results as $key=>$value) {
 
 foreach ($value as $k => $v) {
     if ($k == "stu_id"){
-    echo "<td> $v</td>";
+    echo "<td> ID :  $v</td>" . "</br>";
   }
   if ($k == "stu_lastname"){
-    echo "<td> $v</td>";
+    echo "<td> Nom : $v</td>". "</br>";
   }
   if ($k == "stu_firstname"){
-    echo "<td> $v</td>";
+    echo "<td> Prénom : $v</td>". "</br>";
   }
   if ($k == "stu_birthdate"){
-    echo "<td> $v</td>";
+    echo "<td> Date de naissance : $v</td>". "</br>";
   }
   if ($k == "stu_email"){
-    echo "<td> $v</td>";
+    echo "<td> Email : $v</td>". "</br>";
   }
-  if ($k == "stu_age"){
-    echo "<td> $v</td>";
+  if ($k == ""){
+    echo "<td> Age : $v</td>". "</br>";
   }
-  if ($k == "city_cit_id"){
-    echo "<td> $v</td>";
+  if ($k == "cit_name"){
+    echo "<td> Ville : $v</td>". "</br>";
   }
   if ($k == "stu_friendliness"){
-    echo "<td> $v</td>";
+    echo "<td> Sympathie : $v</td>". "</br>";
   }
-  if ($k == "session_ses_id"){
-    echo "<td> $v</td>";
+  if ($k == "loc_name"){
+    echo "<td> Session :  $v</td>". "</br>";
   }
-  }
+ }
+}
 ?>
