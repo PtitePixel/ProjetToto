@@ -1,18 +1,15 @@
-<style>
-  .nextprev a {
-    display: inline-block;
-  }
-</style>
+
 
 <table>
-  <div class="nextprev">
-    <a href='liste.php?page='.'($page-1).' class='previous'>&laquo; Précedent</a>
-
-    <a href='liste.php?page='.'($page+1).' class='next'>Suivant &raquo;</a>
- </div>
 
 
- <thead
+ <thead>
+   <p> Résultat(s) pour le mot '<?php echo $search ?>'</p>
+   <div class="nextprev">
+     <a href="list.php?idStudent=">&laquo; Précedent</a>
+
+     <a href="list.php?idStudent=">Suivant &raquo;</a>
+   </div>
 
    <tr>
      <th>ID</th>

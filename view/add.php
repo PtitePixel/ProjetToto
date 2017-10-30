@@ -1,26 +1,27 @@
-<style>
+<style >
   form {
-    text-align: center;
-    font-family: Arial;
-    background-color: grey;
-    border: solid black 0.2rem;
-    width: 80%;
-    display: block;
+    background-color: darkblue;
+    color: white;
+    font-family: 'Calibri';
     margin: auto;
-
+    width: 50%;
+    padding: 1rem;
+    border-radius: 2rem;
+    text-align: left;
   }
+
   input {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    text-align: center;
   }
 </style>
 
 
-<form action="add.php" method="post">
+
+ <form action="add.php" method="post">
   Nom : <input type="text" name="lname"><br>
   Prénom : <input type="text" name="fname"><br>
-  Email : <input type="text" name="mail"><br>
-  Date de Naissance : <input type="text" name="date"><br>
+  Email : <input type="text" name="mail"> ex. : email@mail.com<br>
+  Date de Naissance : <input type="text" name="date"> JJ/MM/YYYY<br>
   Sympathie : <select name="friendly">
                   <option>0</option>
                   <option>1</option>
@@ -33,11 +34,11 @@
                   <option>8</option>
                   <option>9</option>
                   <option>10</option>
-               </select>
+               </select><br>
   Session : <select name="ses">
               <option> Technoport Esch-Belval</option>
               <option> Piennes</option>
-            </select>
+            </select><br>
 
   Ville : <select name="city">
             <option> Esch-sur-Alzette</option>
@@ -55,7 +56,7 @@
             <option> Pissange</option>
             <option> Namur</option>
             <option> Bruxelles</option>
-          </select>
+          </select><br>
           <br>
       <input type="submit" value="Submit">
-</form>
+ </form>

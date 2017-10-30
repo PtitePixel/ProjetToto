@@ -1,27 +1,106 @@
-a {
-  text-decoration: none;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.form nav{
+  background-color: darkblue;
+  display: flex;
+}
+
+.form  ul {
+  display: flex;
+  list-style: none;
+  margin: auto;
+}
+
+.form  li {
+    text-align: center;
+}
+
+
+
+.form form {
   text-align: center;
-  font-family: Arial;
-  color: red;
+  display: flex;
+}
+
+.form input {
+  margin: 1rem 1rem 1rem 0rem;
+  border-radius: 2rem;
+  border-color: white;
+  background-color: white;
+}
+
+.form a {
+  text-decoration: none;
+  line-height: 50px;
+  padding: 1rem 1rem;
+  font-family: 'Calibri' ;
+  color: white;
   font-size: 15px;
+
+}
+
+h1 {
+  font-family:  'Calibri' ;
+  color: darkblue;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 2rem;
+}
+
+p {
+  margin: auto;
+  font-family:  'Calibri' ;
+  text-align: center;
+  margin: 3rem;
+}
+
+table {
+  margin: auto;
+  font-family: 'Calibri';
+  width: 80%;
+  text-align: center;
 }
 
 th {
-  font-family: Arial;
-  text-align: left;
-  
-}
-
-td {
-  font-family: Arial;
-  font-size: 12px;
-
+  color: darkblue;
+  text-decoration: underline;
+  text-align: center;
 
 }
 
+td a {
+  color : white;
+  background-color: darkblue;
+  border-radius: 2rem;
+  padding: 0rem 1rem;
+}
 
 footer p {
   text-align: center;
-  font-size: 12px;
-  font-family: Arial;
+  font-size: 15px;
+  font-family: 'Calibri' ;
+}
+
+
+.info {
+  width: 30%;
+  background-color: darkblue;
+  margin: auto;
+  color: white;
+  font-family: 'Calibri';
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+
+.nextprev a {
+  text-align: center;
+  font-family: 'Calibri';
+  color: darkblue;
+  display: flex;
+
 }
