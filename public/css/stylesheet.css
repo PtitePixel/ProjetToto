@@ -104,3 +104,11 @@ footer p {
   display: flex;
 
 }
+.links a {
+ width: 50%;
+ text-align: center;
+ margin: auto;
+ font-family: 'Calibri';
+ text-decoration: none;
+ color: darkblue;
+}
