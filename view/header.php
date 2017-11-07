@@ -13,6 +13,8 @@
         <li>  <a href="index.php"> TOUTES LES SESSIONS </a> </li>
         <li>  <a href="liste.php"> TOUS LES ETUDIANTS </a> </li>
         <li>  <a href="add.php"> AJOUT D'UN ETUDIANT </a> </li>
+        <li>  <a href="signup.php"> S'INSCRIRE </a> </li>
+        <li>  <a href="signin.php"> SE CONNECTER </a> </li>
       </ul>
 
         <form action="liste.php" method="get">

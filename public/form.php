@@ -2,6 +2,8 @@
 
 require_once __DIR__.'/../inc/config.php';
 
+session_start();
+
 if (!empty($_POST)) {
   print_r($_POST);
   print_r($_FILES);
@@ -64,11 +66,11 @@ if (!empty($_POST)) {
   }
 }
 
-$file = fopen("export-20171106.csv", "w");
+/*$file = fopen("export-20171106.csv", "w");
 foreach ($array as $line) {
     fputcsv($file, $line)
 };
-
+*/
 ?>
 <?php
 
