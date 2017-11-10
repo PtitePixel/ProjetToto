@@ -13,9 +13,19 @@
         <li>  <a href="index.php"> TOUTES LES SESSIONS </a> </li>
         <li>  <a href="liste.php"> TOUS LES ETUDIANTS </a> </li>
         <li>  <a href="add.php"> AJOUT D'UN ETUDIANT </a> </li>
-        <li>  <a href="signup.php"> S'INSCRIRE </a> </li>
-        <li>  <a href="signin.php"> SE CONNECTER </a> </li>
-      </ul>
+        <?php if (isset($_SESSION['usr_id'])){
+        ?>    <li> <a href="logout.php"> SE DECONNECTER </a></li>
+        <?php
+        }else{
+        ?>
+         <li>  <a href="signup.php"> S'INSCRIRE </a> </li>
+         <li>  <a href="signin.php"> SE CONNECTER </a> </li>
+
+         <?php
+        }
+        ?>
+
+    </ul>
 
         <form action="liste.php" method="get">
          <input type="text" name="term" /><br />

@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__.'/../inc/config.php';
 
-session_start();
+
 
  $mail = '';
  $password = '';
@@ -18,6 +18,8 @@ session_start();
   $password = md5('projetTOTO'.$password.'userpsw');
   $pswvalid = trim($password);
   $pswvalid = md5('projetTOTO'.$pswvalid.'userpsw');
+
+  $defaultUser = 'user';
 
   //Verify
   $sql = " SELECT usr_email
@@ -36,7 +38,6 @@ session_start();
   if ($check > 0) {
     echo 'email existe déjà';
   }else {
-    //Insert
 
   $formOk = true;
    if (empty($mail)) {
@@ -61,8 +62,9 @@ session_start();
     if ($formOk) {
     echo 'Bravo !';
     $displayForm = false;
-    $sql2 = "INSERT INTO table1 (usr_email, usr_password)
-    VALUES (:mail, :password)";
+    //Insert
+    $sql2 = "INSERT INTO table1 (usr_email, usr_password, usr_role)
+    VALUES (:mail, :password, :user)";
 
     $pdoStatement=$pdo->prepare($sql2);
     if ($pdoStatement === false) {
@@ -72,6 +74,7 @@ session_start();
 
     $pdoStatement->bindValue(':mail', $mail, PDO::PARAM_STR);
     $pdoStatement->bindValue(':password', $password, PDO::PARAM_STR);
+    $pdoStatement->bindValue(':user', $defaultUser, PDO::PARAM_STR);
 
     $pdoStatement->execute();
   }

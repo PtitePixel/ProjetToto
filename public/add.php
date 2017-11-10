@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__.'/../inc/config.php';
-session_start();
+
 
 $fname = '';
 $lname = '';
@@ -66,6 +66,11 @@ if (!empty($_POST)) {
 	}
 }
 
+if ($_SESSION['usr_role'] == 'user'){
+  header("Location: 403.php");
+  }else {
+
+}
 
 
 require_once __DIR__.'/../view/add.php';

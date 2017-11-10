@@ -2,6 +2,10 @@
 
 require_once __DIR__.'/../inc/config.php';
 
-session_start();
 
+if ($_SESSION['usr_role'] == 'user'){
+  header("Location: 403.php");
+  }else {
+
+}
  ?>

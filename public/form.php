@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/../inc/config.php';
 
-session_start();
+
 
 if (!empty($_POST)) {
   print_r($_POST);

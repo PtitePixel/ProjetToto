@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/../inc/config.php';
 
-session_start();
+
 
 $page = isset($_GET['page'])?intval($_GET['page']):1;
 $offset=($page-1) *5;
@@ -41,15 +41,20 @@ if ($PDOStatement === false) {
 }
 $results = $PDOStatement->fetchAll (PDO::FETCH_ASSOC);
 
-/*$search = $_GET ['term'];
-print_r($_GET);
 
-if ($search){
-  $_GET = 'SELECT stu_lastname, stu_firstname
-  FROM student';
+if (isset($_SESSION['usr_id'])){
+
 }else {
-  echo "Insert name";
-}*/
+  header("Location: signin.php");
+}
+
+
+if ($_SESSION['usr_role'] == 'user') {
+  header("Location: 403.php");
+}else {
+  
+}
+
 
 
 

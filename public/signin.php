@@ -1,8 +1,6 @@
 <?php
 require_once __DIR__.'/../inc/config.php';
 
-session_start();
-
 $mail = '';
 $password = '';
 
@@ -13,7 +11,7 @@ if (!empty($_POST)) {
  $mail = isset($_POST['mail']) ? $_POST['mail'] : '';
  $password= isset($_POST['password']) ? $_POST['password'] : '';
 
- $sql = "SELECT usr_email, usr_password, usr_id
+ $sql = "SELECT usr_email, usr_password, usr_id, usr_role
  FROM table1
  WHERE usr_email = :mail";
  var_dump ($mail);
@@ -50,11 +48,13 @@ if (!empty($_POST)) {
 
    if ($formOk) {
      $_SESSION['usr_id'] =$resultat['usr_id'];
+     $_SESSION['usr_role']=$resultat['usr_role'];
      echo '<br>Connecter!<br>'. 'IP: '.$_SERVER['REMOTE_ADDR'].'<br>'.'ID: '.$resultat['usr_id'];
 
      $displayForm = false;
    }
 }
+
 
 require_once __DIR__.'/../view/header.php';
 require_once __DIR__.'/../view/signin.php';
